@@ -15,7 +15,7 @@
 
         <!-- Nombre del producto -->
         <label for="title">Nombre del producto:</label>
-        <input type="text" id="title" name="title" pattern="[0-9A-Za-z\s\-]*" required>
+        <input type="text" id="title" name="title" pattern="[0-9A-Za-z\s\-]+" required>
         <small>Solamente puede contener carácteres, números, guión normal y espacios en blanco</small>
 
 
@@ -26,10 +26,10 @@
 
         <!-- FEcha de alta -->
         <label for="date">Fecha (DD/MM/YYYY):</label>
-        <input type="text" id="date" name="date" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" required>
+        <input type="text" id="date" name="date" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" required> <!-- otra opción: \d{2}/\d{2}/\d{4} -->
         <small>Formato: 31/12/2024 . Nota: Solamente puedes comprobar el formato en el atributo pattern, no puedes
             comprobar si un día es correcto para un mes en concreto. </small>
-
+        
         <button type="submit">Enviar</button>
     </form>
     <script>

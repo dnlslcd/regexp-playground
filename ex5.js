@@ -9,6 +9,13 @@
 
 function extractHexColors(s) {
     /** Modifica solamente el cuerpo de la función */
+    // La expresión debe contener:
+    // 1. carácter #
+    // 2. 6 dígitos o carácteres en mayus/minus
+    // la g de global para no detenerse sólo en el primer match
+    // la i porque las letras pueden ser tanto en mayúsculas como minúsculas
+    let result = s.match(/#([0-9A-Z]{6})/gi);
+    return result || []; // Si result tiene valor devolvemos result. Si result es null se devuelve []
 }
 
 // Juegos de pruebas
